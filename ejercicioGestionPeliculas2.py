@@ -32,7 +32,7 @@ def aniadir_pelicula(peliculas):
         presupuesto = {}
         presupuesto['Presupuesto: '] = presupuesto_usuario
         peliculas['Película guardada: '] = pelicula_guardada
-        
+        #Añadir información de películas
     print(f"{pelicula_usuario} añadida con éxito.")
 
 def eliminar_pelicula(peliculas):
