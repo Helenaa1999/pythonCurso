@@ -22,17 +22,14 @@ def aniadir_pelicula(peliculas):
     pelicula_usuario = input("Introduce el nombre de la película: ")
     pelicula_guardada = peliculas_minusculas(pelicula_usuario)
     if pelicula_guardada not in peliculas and pelicula_guardada is not None:
-        director_usuario = input("Introduce el director: ")
-        director = {}
-        director['Director: '] = director_usuario
-        anio_usuario = input("Introduce el año de la película: ")
-        anio = {}
-        anio['Año: '] = anio_usuario
-        presupuesto_usuario = int(input("Introduce el presupuesto"))
-        presupuesto = {}
-        presupuesto['Presupuesto: '] = presupuesto_usuario
-        peliculas['Película guardada: '] = pelicula_guardada
-        #Añadir información de películas
+        director = input("Director de la película: ")
+        anio = int(input("Año de lanzamiento: "))
+        presupuesto = input("Presupuesto (en millones): ")
+        peliculas[pelicula_guardada] = {
+            "director": director,
+            "año": anio,
+            "presupuesto": presupuesto
+        }        
     print(f"{pelicula_usuario} añadida con éxito.")
 
 def eliminar_pelicula(peliculas):
